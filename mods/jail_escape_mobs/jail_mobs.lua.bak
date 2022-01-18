@@ -30,7 +30,7 @@ mobs:register_mob("jail_escape_mobs:jail_gaurd", {
 	jump_height = 0,
 	stepheight = 1.1,
 	floats = 0,
-	view_range = 25,
+	view_range = 30,
 	fall_damage = true,
 	air_damage = 100,
 	drops = {
@@ -89,7 +89,7 @@ mobs:register_mob("jail_escape_mobs:jail_patroller", {
 	jump_height = 0,
 	stepheight = 1.1,
 	floats = 0,
-	view_range = 35,
+	view_range = 40,
 	fall_damage = true,
 	air_damage = 100,
 	drops = {
@@ -149,7 +149,7 @@ mobs:register_mob("jail_escape_mobs:jail_officer", {
 	jump_height = 0,
 	stepheight = 1.1,
 	floats = 0,
-	view_range = 15,
+	view_range = 20,
 	fall_damage = true,
 	air_damage = 100,
 	drops = {
@@ -208,7 +208,7 @@ mobs:register_mob("jail_escape_mobs:jail_swat", {
 	jump_height = 0,
 	stepheight = 1.1,
 	floats = 0,
-	view_range = 25,
+	view_range = 30,
 	fall_damage = true,
 	air_damage = 100,
 	drops = {
@@ -266,7 +266,7 @@ mobs:register_mob("jail_escape_mobs:jail_bailieff", {
 	jump_height = 0,
 	stepheight = 1.1,
 	floats = 0,
-	view_range = 35,
+	view_range = 40,
 	fall_damage = true,
 	air_damage = 100,
 	drops = {
@@ -325,7 +325,7 @@ mobs:register_mob("jail_escape_mobs:jail_marshal", {
 	jump_height = 0,
 	stepheight = 1.1,
 	floats = 0,
-	view_range = 40,
+	view_range = 45,
 	fall_damage = true,
 	air_damage = 100,
 	drops = {

@@ -1,0 +1,7 @@
+name = builtin_item
+depends = default
+optional_depends =
+description = Dropped items can now be pushed by water and have their own custom functions.
+release = 8534
+author = TenPlus1
+title = Builtin Item
