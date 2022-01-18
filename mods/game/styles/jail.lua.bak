@@ -214,7 +214,7 @@ minetest.register_node("game:jail_vault", {
 		max_items = 2,
 		items = {
 			{items = {"game:dynamite"}, rarity = 2},
-			{items = {"gunslinger:pistol"}, rarity = 4},
+			{items = {"gunslinger:pistol"}, rarity = 5},
 			{items = {"game:jail_crowbar"}, rarity = 1}
 		},
 	},

@@ -406,6 +406,7 @@ function(player)
 	player:hud_set_hotbar_itemcount(6)
     player:set_inventory_formspec(pause_menu())
 	player:hud_set_hotbar_selected_image("hotbar_select.png")
+	player:hud_set_hotbar_image("hotbar.png")
 	player:set_formspec_prepend(
 		"background[-0.2,-0.3;11.4,6.25;background.png"
 	)
