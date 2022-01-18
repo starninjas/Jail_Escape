@@ -23,3 +23,4 @@ THE SOFTWARE.
 
 Edits made by StarNinjas for Jail Escape include the following:
  -Removed Lucky Block, Mount and crafts/craftitems
+ -Made air damage into mob remover

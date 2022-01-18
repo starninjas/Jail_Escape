@@ -1155,7 +1155,7 @@ function mob_class:do_env_damage()
 	end
 
 	-- air damage
-	if self.air_damage ~= 0 and self.standing_in == "game:kill" then
+	if self.air_damage ~= 0 and self.standing_in == "air" then
 
 		self.health = self.health - self.air_damage
 
