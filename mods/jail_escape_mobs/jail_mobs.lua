@@ -409,57 +409,7 @@ mobs:register_mob("jail_escape_mobs:jail_rebel", {
 	},
 })
 
-
-minetest.register_craftitem("jail_escape_mobs:jail_rebel", {
-	--type = "tool",
-	description = "Small Key",
-	inventory_image = "mobs_small_key.png",
--- tool_capabilities = {
-		--full_punch_interval = 0.9,
-		--max_drop_level = 0,
-		--groupcaps = {
-		--	breakable = {times={[3]=0}, uses=1, maxlevel=1},
-	--	},
---	},
-	
-		on_place = function(itemstack, placer, pointed_thing)
-
-			local pos = pointed_thing.above
-
-			-- does existing on_rightclick function exist?
-			local under = minetest.get_node(pointed_thing.under)
-			local def = minetest.registered_nodes[under.name]
-
-			if def and def.on_rightclick then
-
-				return def.on_rightclick(
-						pointed_thing.under, under, placer, itemstack)
-			end
-
-			if pos
-			and not minetest.is_protected(pos, placer:get_player_name()) then
-
-				if not minetest.registered_entities["jail_escape_mobs:jail_rebel"] then
-					return
-				end
-
-				pos.y = pos.y + 1
-
-				local smob = minetest.add_entity(pos, "jail_escape_mobs:jail_rebel")
-				local ent = smob and smob:get_luaentity()
-
-				if not ent then return end -- sanity check
-
-				-- if not in creative then take item
-				if not mobs.is_creative(placer:get_player_name()) then
-					itemstack:take_item()
-				end
-			end
-
-			return itemstack
-		end,
-	})
-
+mobs:register_egg("jail_escape_mobs:jail_rebel", ("Small Key"), "mobs_small_key.png", 0)
 
 mobs:register_mob("jail_escape_mobs:jail_rebel_brute", {
 	type = "npc",
