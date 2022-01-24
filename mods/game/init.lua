@@ -16,6 +16,7 @@ game = {}
 --Settings Changes --
 --BE VERY CAREFUL WHEN PLAYING WITH OTHER PEOPLES SETTINGS--
 minetest.settings:set("enable_damage","true")
+minetest.settings:set("creative","false")
 local max_block_send_distance = minetest.settings:get("max_block_send_distance")
 local block_send_optimize_distance = minetest.settings:get("block_send_optimize_distance")
 if max_block_send_distance == 31 then -- no one would set these to 31, so it must have been a crash,
@@ -78,9 +79,6 @@ function laby_register_style(name, music_name, map_from_maze, cleanup, genMaze)
     styles[numStyles].cleanup = cleanup
     styles[numStyles].genMaze = genMaze
 end
-
---Removes day and night cycle
-minetest.settings:set("time_speed", 0)
 
 --Common node between styles, used for hidden floor to fall onto
 minetest.register_node("game:inv",
@@ -270,8 +268,8 @@ local function pause_menu()
         "button_exit[1.5,0.5;6.8,1;game_menu;Quit to Game Menu]",
         "button_exit[1.5,2;6.8,1;restart;Restart with new Map]",
         "hypertext[3.5,3.5;2.5,4.25;;<global halign=center color=#ffffff size=34 font=Regular>Credits<global halign=center color=#a6a6bf size=18 font=Regular>\n",
-        "Original Game by ExeVirus\n",
-        "Jail Escape by StarNinjas\n",
+        "Jail Escape by StarNinjas\n", 
+		"Original Game by ExeVirus\n",
     }
     return table.concat(r)
 end
@@ -403,6 +401,7 @@ function(player)
             minimap_radar = true,
         }
     )
+		
 	player:hud_set_hotbar_itemcount(6)
     player:set_inventory_formspec(pause_menu())
 	player:hud_set_hotbar_selected_image("hotbar_select.png")
